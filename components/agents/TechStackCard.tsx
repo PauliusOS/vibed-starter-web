@@ -58,7 +58,7 @@ export default function TechStackCard({ agent, techStack, author }: TechStackCar
 
   return (
     <Link href={`/agents/${agent._id}`}>
-      <div className="group relative bg-black/40 border border-white/10 rounded-3xl p-5 hover:border-white/20 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer h-56 flex flex-col">
+      <div className="group relative bg-black/40 border border-white/20 rounded-3xl p-5 hover:border-white/30 transition-all duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer h-56 flex flex-col">
         {/* Header with logo and title */}
         <div className="flex items-start mb-3">
           <img
@@ -69,11 +69,11 @@ export default function TechStackCard({ agent, techStack, author }: TechStackCar
               e.currentTarget.style.display = 'none';
             }}
           />
-          <div className="flex-1">
-            <h3 className="text-base font-bold text-white group-hover:text-white/90 mb-1">
+          <div className="flex-1 -mt-0.5">
+            <h3 className="text-base font-bold text-white group-hover:text-white/90 mb-0.5 leading-tight">
               {agent.name}
             </h3>
-            <span className="inline-block text-xs font-medium text-gray-400 bg-white/5 px-2 py-0.5 rounded">
+            <span className="inline-block text-xs font-medium text-gray-300 bg-white/10 border border-white/20 px-2 py-0.5 rounded">
               {productType}
             </span>
           </div>
