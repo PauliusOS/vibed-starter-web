@@ -1,4 +1,7 @@
 @import url('../public/fonts/mona-sans.css');
+@import url('https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=SUSE+Mono:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -57,8 +60,10 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
-  --font-sans: 'Mona Sans', system-ui, -apple-system, sans-serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
   --font-mono: var(--font-geist-mono);
+  --font-heading: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-logo: 'SUSE Mono', monospace;
 
   /* Tailwind font weight mappings for Mona Sans variable font */
   --font-weight-100: 200;
@@ -96,6 +101,7 @@
 
 body {
   font-family: 'Mona Sans', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.025em; /* tracking-tighter */
 }
 
 
@@ -105,5 +111,23 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+    font-family: 'Mona Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.025em; /* tracking-tighter */
+  }
+
+  /* Default font for all elements */
+  * {
+    font-family: 'Mona Sans', system-ui, -apple-system, sans-serif;
+    letter-spacing: -0.025em; /* tracking-tighter */
+  }
+
+  /* Apply Mona Sans to all headings (same as body text) */
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Mona Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  /* Apply SUSE Mono to logo elements */
+  .font-logo {
+    font-family: var(--font-logo);
   }
 }

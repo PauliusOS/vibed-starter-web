@@ -73,7 +73,7 @@ export default function TodoDashboard() {
   return (
     <div className="max-w-4xl mx-auto">
       <div className="mb-8">
-        <h1 className="text-2xl font-mona-heading mb-2">My Tasks</h1>
+        <h1 className="text-2xl font-bold mb-2">My Tasks</h1>
       </div>
 
       <div className="mb-6 bg-card rounded-lg p-4 border border-border">
@@ -245,7 +245,7 @@ export default function TodoDashboard() {
                   </button>
                   <div className="flex-1">
                     <h3
-                      className={`text-base font-mona-medium ${
+                      className={`text-base font-medium ${
                         todo.status === "completed"
                           ? "line-through text-muted-foreground"
                           : "text-foreground"
